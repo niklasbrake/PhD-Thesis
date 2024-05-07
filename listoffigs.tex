@@ -1,0 +1,37 @@
+\chapter*{List of figures}
+\addcontentsline{toc}{chapter}{List of figures}
+\fancyhead[L]{{\color{gray}\nouppercase{List of figures}}}
+ 
+\renewcommand{\cftfigpresnum}{\bfseries \color{seccolor}\figurename\ }
+\settowidth{\cftfignumwidth}{Figure 00.0000}
+\renewcommand\cftfigindent{0pt}  % no indentation
+
+% Get rid of header for list of figures
+\makeatletter
+\renewcommand\listoffigures{%
+        \@starttoc{lof}%
+}
+\makeatother
+
+% Get rid of header for list of tables
+\makeatletter
+\renewcommand\listoftables{%
+        \@starttoc{lot}%
+}
+\makeatother
+
+\setlength{\parskip}{0pt}
+
+\listoffigures
+
+\newpage
+\chapter*{List of tables}
+\addcontentsline{toc}{chapter}{List of tables}
+\fancyhead[L]{{\color{gray}\nouppercase{List of tables}}}
+
+\renewcommand{\cfttabpresnum}{\bfseries \color{seccolor}\tablename\ }
+\settowidth{\cfttabnumwidth}{Table 00.0000}
+\renewcommand\cfttabindent{0pt}  % no indentation
+\listoftables
+
+\setlength{\parskip}{6pt}

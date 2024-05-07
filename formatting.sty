@@ -1,0 +1,165 @@
+% ------------------------------------------------- %
+% SET MARGINS
+% ------------------------------------------------- %
+
+\usepackage[
+    top=1.05in,
+    bottom=0.95in,
+    left=1in,
+    right=1in] {geometry}
+
+
+% ------------------------------------------------- %
+% SOME FORMATTING (titles, captions, sections, fancy)
+% ------------------------------------------------- %
+
+\usepackage{xcolor} % for colors
+\definecolor{seccolor}{HTML}{074bb6}
+\definecolor{capcolor}{HTML}{cc3311}
+\usepackage[labelfont={bf, color=capcolor}, font={singlespacing, footnotesize}]{caption} %for the caption layout
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{seccolor}}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat*{\section}{\Large \bfseries \scshape \color{seccolor}}
+\titleformat*{\subsection}{\large \bfseries \color{seccolor}}
+\titleformat*{\subsubsection}{\normalsize \bfseries \color{seccolor}}
+
+\newcommand{\captiontitle}[1]{\textbf{\textcolor{capcolor}{#1}}}
+
+\usepackage{fancyhdr} % for header
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{16pt}
+\setlength{\headsep}{16pt}
+\renewcommand{\arraystretch}{1.2}
+% \renewcommand{\headrule}{\hbox to\headwidth{%
+%   \color{seccolor}\leaders\hrule height \headrulewidth\hfill}}
+\let\oldheadrule\headrule% Copy \headrule into \oldheadrule
+\renewcommand{\headrule}{\color{seccolor}\oldheadrule}% Add colour to \headrule
+\renewcommand{\headrulewidth}{0.5pt}
+
+% Redefine the \footnoterule command
+\renewcommand{\footnoterule}{%
+  {\color{seccolor}\hrule height 0.5pt width 0.5\textwidth}%
+  \vspace{0.5em}%
+}
+
+% ------------------------------------------------- %
+% SOME STANDARD PACKAGES
+% ------------------------------------------------- %
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} % for math
+\usepackage{amssymb}
+\usepackage{mathtools} % for cases in equations
+\usepackage{float}
+\usepackage{array} % for tables, set the width
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % custom, wrapped column with set width, left-justf.
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % custom, wrapped column with set width, right-justf.
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % custom, wrapped column with set width, centered
+
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl} % for colored tables
+\usepackage{subfig} % for sub-figures (a), (b), etc
+\usepackage{setspace} % e.g. \singlespacing, \onehalfspacing, and \doublespacing
+\usepackage[english]{babel}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            citecolor=black,
+            urlcolor=black]{hyperref}
+%    \hypersetup{hidelinks}
+\usepackage{textcomp} % for special symbols (musical notes etc)
+\usepackage{multicol}
+\usepackage{enumerate} % to enumerate (1), (a) ...
+\usepackage{cuted} % for "strip" environment in multicolumn
+\usepackage{flushend} % to make columns on last page align
+\usepackage{stfloats} % to put table* at bottom in twocolumn
+\usepackage{booktabs} % to add line space using \addlinespace{} in a latex table
+\usepackage{chemformula} % to have chemical equations
+\usepackage{txfonts} % for copyright symbol
+\usepackage{textgreek} % self-explanatory
+\usepackage{physics} % for derivatives and other math shortcuts
+\usepackage{microtype} % for refined typesetting
+
+
+
+% ------------------------------------------------- %
+% SET CITATION STYLE
+% ------------------------------------------------- %
+
+\usepackage[numbers, round, sort, compress]{natbib}
+% \usepackage{cite}
+
+
+
+% ------------------------------------------------- %
+% SOME COMMANDS
+% ------------------------------------------------- %
+
+\newcommand{\overbar}[1]{\mkern 3.0mu\overline{\mkern-3.0mu#1\mkern-3.0mu}\mkern 3.0mu}
+\newcommand{\thickhat}[1]{\mathbf{\hat{\text{$#1$}}}}
+\newcommand{\thickbar}[1]{\mathbf{\bar{\text{$#1$}}}}
+\newcommand{\thicktilde}[1]{\mathbf{\tilde{\text{$#1$}}}}
+\newcommand{\sub}[1]{\textsubscript{#1}}
+\newcommand{\supr}[1]{\textsuperscript{#1}}
+\newcommand{\E}[1]{\ensuremath{\times 10^{#1}}}
+\def\pos{\textsuperscript{+}}
+\def\neg{\textsuperscript{--}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\seccolor}[1]{\textcolor{seccolor}{#1}}
+\newcommand{\secbfcolor}[1]{\textbf{\textcolor{seccolor}{#1}}}
+\newcommand{\Dipep}[2]{\ensuremath{D_{#1\textup{-#2}}}}
+\newcommand{\dTCR}[1]{\textDelta{}TCR}
+\newcommand{\KO}[1]{\textsuperscript{-/-}}
+\newcommand{\degree}[1]{$^{\circ}${#1}}
+\newcommand{\kmin}[1]{\ensuremath{k_{\textrm{min}}}}
+\newcommand{\kmax}[1]{\ensuremath{k_{\textrm{max}}}}
+\newcommand{\kmode}[1]{\ensuremath{k_{\textrm{mode}}}}
+\newcommand{\kspan}[1]{\ensuremath{k_{\textrm{span}}}}
+
+% For chem arrow
+\RenewChemArrow{<=>}{
+    \draw [chemarrow, -{Computer Modern Rightarrow[left]}]
+        ([yshift=1pt]cf_arrow_start) -- ([yshift=1pt]cf_arrow_end);
+    \draw [chemarrow, {Computer Modern Rightarrow[left]}-]
+        ([yshift=-1pt]cf_arrow_start) -- ([yshift=-1pt]cf_arrow_end);
+}
+
+% Define a subtitle
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{\@latex@warning@no@line{No \noexpand\subtitle given}}
+
+\makeatletter
+% Redefine how title is made
+\newcommand{\thesistitle}{%
+    \newpage
+    \thispagestyle{empty}
+    \null
+    \vskip 0.8in%
+    \begin{center}%
+        \let \footnote \thanks
+        {\huge \bfseries \scshape \color{seccolor}\@title \par}
+        % \vskip 0.25in%
+        % {\LARGE \scshape \color{seccolor}\@subtitle \par}
+        \vskip 1.5in%
+        {\large
+            \begin{tabular}[t]{c}%
+                \textbf{\Large \color{seccolor}\@author} \\[1em]
+                Quantitative Life Sciences PhD Program, McGill University, Montreal \\[2em]
+                August 2024
+            \end{tabular}\par}%
+        \vskip 1in %
+        A thesis submitted to McGill University in partial fulfillment of the requirements \par of the degree of Doctor of Philosophy
+        \vskip 1.5em
+        © 2024 Niklas Brake
+        \vskip 1in
+        \includegraphics[width=0.35\textwidth]{Figures/mcgill_logo.png}\\
+    \end{center}%
+    \par
+    \vskip 1.5em
+    \clearpage
+}
+\makeatother

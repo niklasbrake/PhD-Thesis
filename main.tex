@@ -1,0 +1,129 @@
+\documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{formatting}
+\usepackage{mathpazo}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{etoolbox}
+\usepackage[all]{nowidow} % prevent single lines by themselves
+\usepackage{lipsum}
+\usepackage{tabto}
+%\usepackage[version=4]{mhchem} % for reactions.
+% \numberwithin{equation}{section} % to make Eq. 2.1, e.g.
+% \usepackage{chngcntr} % to change figure counter
+% \counterwithin{figure}{section} % figure 1.1, 2.1, etc.
+
+
+\title{On the neurophysiology underlying broadband electric field fluctuations at the scalp}
+\author{Niklas Brake}
+\date{\today}
+% \setcounter{secnumdepth}{0} % to remove numbers
+
+\fancypagestyle{plain}{%redefining plain pagestyle
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{} %clear all headers and footers fields
+\fancyfoot[C]{\color{seccolor}\thepage} %prints the page number on the right side of the header
+}
+
+\begin{document}
+
+\thesistitle
+\onehalfspacing
+
+\fancyfoot[R]{\color{seccolor}\thepage}
+\fancyhead[L]{{\color{gray}\nouppercase{Table of contents}}}
+\renewcommand{\cftchapfont}{\scshape\bfseries}
+\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\small}
+\pagenumbering{roman}
+
+\newpage
+
+\setlength{\parskip}{6pt}
+\setlength{\skip\footins}{18pt}
+\setlength{\footnotesep}{\baselineskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\fancyhead[L]{{\color{gray}\nouppercase{Abstract}}}
+Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid class A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately 60 Hz that is independent of neural dynamics. Consequently, systemic changes in synaptic currents perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above 60 Hz is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and 600 Hz, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
+
+\newpage
+
+\chapter*{Résumé}
+\addcontentsline{toc}{chapter}{Résumé}
+\fancyhead[L]{{\color{gray}\nouppercase{Résumé}}}
+Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observer les changements de l'activité neuronale à la milliseconde, sur une large gamme d'échelles spatiales allant du micromètre au centimètre. À ces échelles spatiales plus grandes, les mesures électrophysiologiques peuvent être effectuées de manière entièrement non invasive grâce à l'enregistrement de potentiels électriques au niveau du cuir chevelu, connu sous le nom d'électroencéphalographie (EEG). Les oscillations périodiques de l'EEG sont observées et caractérisées depuis longtemps, alors que la nature des fluctuations à large bande de ces signaux reste mal comprise en comparaison. Les fluctuations à large bande sont évidentes en raison de la tendance de fond continue des spectres EEG, sur laquelle se superposent les pics correspondant aux rythmes cérébraux. Les interprétations de cette tendance spectrale vont d'un bruit non pertinent à un épiphénomène des rythmes cérébraux, en passant par le reflet d'un régime apériodique de l'activité neuronale. Cette absence de consensus entretient plusieurs questions ouvertes dans ce domaine. Comment interpréter les différences de tendance spectrale? Cette tendance contamine-t-elle les mesures du rythme cérébral? Dans cette thèse, j'aborde ces questions en développant des modèles biophysiques et statistiques de la génération d'EEG qui intègrent à la fois des détails physiologiques émergents et de nouvelles observations expérimentales. La thèse comprend deux manuscrits. Le premier manuscrit conclut que l'EEG n'est pas seulement une mesure des rythmes cérébraux, mais qu'il peut aussi refléter l'activité synaptique apériodique. De plus, à des fréquences inférieures à environ 60 Hz, les spectres sont fortement modelés par la cinétique de gating des récepteurs de classe A de l'acide γ-aminobutyrique. Cette cinétique produit une forme lorentzienne proéminente dans les spectres EEG, qui est indépendante de la dynamique neuronale. Par conséquent, les changements systémiques dans les courants synaptiques perturbent les estimations du rythme cérébral, à moins que les spectres ne soient rectifiés en ajustant et en corrigeant la tendance lorentzienne. Le second manuscrit conclut que l'activité dopante ne peut pas générer de signaux EEG à large bande, mais qu'elle peut générer des oscillations à haute fréquence entre 60 et 600 Hz environ. Ces conclusions suggèrent qu'il est inutile de mesurer les oscillations à haute fréquence par rapport à la tendance spectrale, contrairement à ce qui se passe pour les rythmes cérébraux à basse fréquence. En résumé, cette thèse présente une théorie des mécanismes physiologiques sous-jacents aux signaux EEG à large bande et souligne les implications pratiques pour l'analyse et l'interprétation des données EEG.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\fancyhead[L]{{\color{gray}\nouppercase{Acknowledgements}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\include{contrib-authors}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\include{contrib-knowledge}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \include{listoffigs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
+% \include{listofabbrvs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\renewcommand*\contentsname{\color{seccolor}Table of contents}
+\titlecontents{section}[18pt]{\addvspace{3pt}}{\thecontentslabel\enspace}{}{\titlerule*[0.7064pc]{.}\contentspage}
+\tableofcontents
+
+\newpage
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyhead[R]{}
+\fancyhead[L]{{\color{gray}\textit{\chaptername\ \thechapter}\ --\ \leftmark}}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\hypersetup{linkcolor=seccolor}
+
+\include{chapter1-intro}
+
+\include{chapter2}
+
+\include{chapter3-AvC}
+
+\include{chapter4-VE}
+
+\include{chapter5-concl}
+
+\newpage
+\chapter*{References}
+\fancyhead[L]{{\color{gray}\nouppercase{References}}}
+%\addcontentsline{toc}{chapter}{Bibliography}
+
+\setlength{\baselineskip}{12pt}
+\setlength{\bibsep}{3pt plus 0.3ex}
+\bibliographystyle{unsrt}
+\footnotesize
+
+% Suppress the chapter title "Bibliography"
+\begingroup
+\renewcommand\bibname{References}
+\renewcommand{\chapter}[2]{}% for other classes
+\bibliography{Bibliography/library_AvC,Bibliography/library_general,Bibliography/library_Tr1,Bibliography/library_VE}
+\endgroup
+
+
+\end{document}
