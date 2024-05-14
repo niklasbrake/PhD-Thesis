@@ -16,7 +16,17 @@
 \usepackage{xcolor} % for colors
 \definecolor{seccolor}{HTML}{074bb6}
 \definecolor{capcolor}{HTML}{cc3311}
-\usepackage[labelfont={bf, color=capcolor}, font={singlespacing, footnotesize}]{caption} %for the caption layout
+\usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}]{caption} %for the caption layout
+
+% \makeatletter
+% \newcommand*\mysize{%
+%   \@setfontsize\mysize{8}{9.6}%
+% }
+% \makeatother
+
+% \usepackage[labelfont={bf, color=capcolor}, font={singlespacing, mysize}]{caption} %for the caption layout
+
+
 \usepackage{titletoc}
 \usepackage{titlesec}
 \usepackage{tocloft}
@@ -26,7 +36,7 @@
 \titleformat*{\subsection}{\large \bfseries \color{seccolor}}
 \titleformat*{\subsubsection}{\normalsize \bfseries \color{seccolor}}
 
-\newcommand{\captiontitle}[1]{\textbf{\textcolor{capcolor}{#1}}}
+\newcommand{\captiontitle}[1]{\textbf{\textcolor{black}{#1}}}
 
 \usepackage{fancyhdr} % for header
 \pagestyle{fancy}
@@ -68,8 +78,9 @@
 \usepackage[english]{babel}
 \usepackage[colorlinks=true,
             linkcolor=black,
-            citecolor=black,
+            citecolor=seccolor,
             urlcolor=black]{hyperref}
+
 %    \hypersetup{hidelinks}
 \usepackage{textcomp} % for special symbols (musical notes etc)
 \usepackage{multicol}
@@ -81,17 +92,21 @@
 \usepackage{chemformula} % to have chemical equations
 \usepackage{txfonts} % for copyright symbol
 \usepackage{textgreek} % self-explanatory
-\usepackage{physics} % for derivatives and other math shortcuts
+% \usepackage{physics} % for derivatives and other math shortcuts
 \usepackage{microtype} % for refined typesetting
+\usepackage{floatrow}
 
-
+\usepackage{xurl}
 
 % ------------------------------------------------- %
 % SET CITATION STYLE
 % ------------------------------------------------- %
 
-\usepackage[numbers, round, sort, compress]{natbib}
-% \usepackage{cite}
+% \usepackage[numbers, round, sort, compress]{natbib}
+% \usepackage[super, unmove]{cite}
+\usepackage[superscript,biblabel,nomove]{cite}
+\bibliographystyle{unsrt}
+
 
 
 

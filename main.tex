@@ -7,10 +7,10 @@
 \usepackage[all]{nowidow} % prevent single lines by themselves
 \usepackage{lipsum}
 \usepackage{tabto}
-%\usepackage[version=4]{mhchem} % for reactions.
-% \numberwithin{equation}{section} % to make Eq. 2.1, e.g.
-% \usepackage{chngcntr} % to change figure counter
-% \counterwithin{figure}{section} % figure 1.1, 2.1, etc.
+
+\usepackage[color=]{siunitx}
+\sisetup{per-mode=power}
+\DeclareSIUnit\molar{\mole\per\cubic\deci\metre}
 
 
 \title{On the neurophysiology underlying broadband electric field fluctuations at the scalp}
@@ -46,7 +46,7 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 \fancyhead[L]{{\color{gray}\nouppercase{Abstract}}}
-Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid class A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately 60 Hz that is independent of neural dynamics. Consequently, systemic changes in synaptic currents perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above 60 Hz is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and 600 Hz, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
+Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid type A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately \qty{60}{\hertz} that is independent of neural dynamics. Consequently, systemic changes in synaptic currents perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above \qty{60}{\hertz} is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and 600, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
 
 \newpage
 
@@ -100,18 +100,18 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 
 \include{chapter1-intro}
 
-\include{chapter2}
+% \include{chapter2-natcom}
 
-\include{chapter3-AvC}
+% \include{chapter3-AvC}
 
-\include{chapter4-VE}
+% \include{chapter4-VE}
 
-\include{chapter5-concl}
+% \include{chapter5-concl}
 
 \newpage
 \chapter*{References}
 \fancyhead[L]{{\color{gray}\nouppercase{References}}}
-%\addcontentsline{toc}{chapter}{Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
 
 \setlength{\baselineskip}{12pt}
 \setlength{\bibsep}{3pt plus 0.3ex}
@@ -122,7 +122,7 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 \begingroup
 \renewcommand\bibname{References}
 \renewcommand{\chapter}[2]{}% for other classes
-\bibliography{Bibliography/library_AvC,Bibliography/library_general,Bibliography/library_Tr1,Bibliography/library_VE}
+\bibliography{Bibliography/library_natcom,Bibliography/library_lit_review}
 \endgroup
 
 
