@@ -16,7 +16,7 @@
 \usepackage{xcolor} % for colors
 \definecolor{seccolor}{HTML}{074bb6}
 \definecolor{capcolor}{HTML}{cc3311}
-\usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}]{caption} %for the caption layout
+\usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}, singlelinecheck=false]{caption} %for the caption layout
 
 % \makeatletter
 % \newcommand*\mysize{%
@@ -106,6 +106,14 @@
 % \usepackage[super, unmove]{cite}
 \usepackage[superscript,biblabel,nomove]{cite}
 \bibliographystyle{unsrt}
+
+\newcommand*{\citen}[1]{%
+  \begingroup
+    \romannumeral-`\x % remove space at the beginning of \setcitestyle
+    \setcitestyle{numbers}%
+    \cite{#1}%
+  \endgroup   
+}
 
 
 
