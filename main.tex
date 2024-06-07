@@ -46,7 +46,7 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 \fancyhead[L]{{\color{gray}\nouppercase{Abstract}}}
-Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid type A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately \qty{60}{\hertz} that is independent of neural dynamics. Consequently, systemic changes in synaptic currents perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above \qty{60}{\hertz} is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and 600, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
+Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid type A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately \qty{60}{\hertz} that is independent of neural dynamics. Consequently, systemic changes in synaptic currents, e.g. by drug administration, perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above \qty{60}{\hertz} is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and 600, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
 
 \newpage
 
@@ -60,26 +60,20 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \fancyhead[L]{{\color{gray}\nouppercase{Acknowledgements}}}
+As much as do not want to exclude any individuals in my acknowledgements, I feel it would be a greater disservice to relegate to anonymity my peers who supported me the most throughout my degree.
 
+Finally, to my newborn son whose pure, unbounded curiosity and playfulness, in the face of staggering naivete and ignorance, is a testament to the nature of learning. There is no sin in being ignorant of something one has never encountered. I know there are vast expanses of mathematics, neuroscience, and scientific investigation that remain unknown to me, ignorance of which may cause me to trip and fall. But here I am boldly setting forth a thesis and claiming that I have advanced human knowledge. Perhaps if I had not seen my son unashamedly smacking his head into the same chair over and over again, I would not have the courage to make these claims. But I know that the alternative is lying on my back forever and waiting for others to carry me. So here I go...
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{contrib-authors}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \include{contrib-knowledge}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newpage
-% \include{listoffigs}
+\newpage
+% \include{contrib-authors}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newpage
-% \include{listofabbrvs}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 \renewcommand*\contentsname{\color{seccolor}Table of contents}
@@ -98,25 +92,18 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \hypersetup{linkcolor=seccolor}
 
-\renewcommand{\figurename}{Fig.}
-
 \include{chapter1-intro}
 
-\include{chapter2-natcom}
+% \include{chapter2-natcom}
 
-% \include{chapter3-AvC}
+% \include{chapter3-apEEG}
 
-% \include{chapter4-VE}
-
-% \include{chapter5-concl}
+% \include{chapter4-concl}
 
 \newpage
 \chapter*{References}
 \fancyhead[L]{{\color{gray}\nouppercase{References}}}
-\addcontentsline{toc}{chapter}{Bibliography}
-
 \setlength{\baselineskip}{12pt}
-% \setlength{\bibsep}{3pt plus 0.3ex}
 \bibliographystyle{unsrt}
 \footnotesize
 
@@ -124,8 +111,13 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 \begingroup
 \renewcommand\bibname{References}
 \renewcommand{\chapter}[2]{}% for other classes
-\bibliography{Bibliography/library_natcom,Bibliography/library_lit_review}
+\bibliography{Bibliography/library_natcom,Bibliography/library_lit_review,Bibliography/library_apEEG}
 \endgroup
 
+% \begin{appendices}
+\addappheadtotoc
+\appendix
+% \include{appendixA}
+% \end{appendices}
 
 \end{document}

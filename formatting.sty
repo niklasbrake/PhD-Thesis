@@ -13,19 +13,34 @@
 % SOME FORMATTING (titles, captions, sections, fancy)
 % ------------------------------------------------- %
 
+\usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}, singlelinecheck=false]{caption} %for the caption layout
+\renewcommand{\figurename}{Fig}
+\renewcommand{\theequation}{\textbf{Eq. \thechapter.\arabic{equation}}}
+
+\usepackage[superscript,biblabel,nomove]{cite}
+\bibliographystyle{unsrt}
+
+\newcommand*{\citen}[1]{%
+  \begingroup
+    \romannumeral-`\x % remove space at the beginning of \setcitestyle
+    \setcitestyle{numbers}%
+    \cite{#1}%
+  \endgroup   
+}
+
 \usepackage{xcolor} % for colors
 \definecolor{seccolor}{HTML}{074bb6}
+\definecolor{lightseccolor}{HTML}{8d9db6}
 \definecolor{capcolor}{HTML}{cc3311}
-\usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}, singlelinecheck=false]{caption} %for the caption layout
-
-% \makeatletter
-% \newcommand*\mysize{%
-%   \@setfontsize\mysize{8}{9.6}%
-% }
-% \makeatother
-
-% \usepackage[labelfont={bf, color=capcolor}, font={singlespacing, mysize}]{caption} %for the caption layout
-
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            citecolor=seccolor,
+            urlcolor=black]{hyperref}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+\urlstyle{same}
 
 \usepackage{titletoc}
 \usepackage{titlesec}
@@ -56,6 +71,8 @@
   \vspace{0.5em}%
 }
 
+
+
 % ------------------------------------------------- %
 % SOME STANDARD PACKAGES
 % ------------------------------------------------- %
@@ -76,11 +93,6 @@
 \usepackage{subfig} % for sub-figures (a), (b), etc
 \usepackage{setspace} % e.g. \singlespacing, \onehalfspacing, and \doublespacing
 \usepackage[english]{babel}
-\usepackage[colorlinks=true,
-            linkcolor=black,
-            citecolor=seccolor,
-            urlcolor=black]{hyperref}
-
 %    \hypersetup{hidelinks}
 \usepackage{textcomp} % for special symbols (musical notes etc)
 \usepackage{multicol}
@@ -95,26 +107,11 @@
 % \usepackage{physics} % for derivatives and other math shortcuts
 \usepackage{microtype} % for refined typesetting
 \usepackage{floatrow}
-
+\usepackage{bm}
+\usepackage{hanging}
+\usepackage[toc,titletoc,title]{appendix}
 \usepackage{xurl}
-
-% ------------------------------------------------- %
-% SET CITATION STYLE
-% ------------------------------------------------- %
-
-% \usepackage[numbers, round, sort, compress]{natbib}
-% \usepackage[super, unmove]{cite}
-\usepackage[superscript,biblabel,nomove]{cite}
-\bibliographystyle{unsrt}
-
-\newcommand*{\citen}[1]{%
-  \begingroup
-    \romannumeral-`\x % remove space at the beginning of \setcitestyle
-    \setcitestyle{numbers}%
-    \cite{#1}%
-  \endgroup   
-}
-
+\usepackage{wrapfig}
 
 
 
