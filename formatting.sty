@@ -15,7 +15,7 @@
 
 \usepackage[labelfont={bf, color=black}, font={singlespacing, footnotesize}, singlelinecheck=false]{caption} %for the caption layout
 \renewcommand{\figurename}{Fig}
-\renewcommand{\theequation}{\textbf{Eq. \thechapter.\arabic{equation}}}
+\renewcommand{\theequation}{Eq. \thechapter.\arabic{equation}}
 
 \usepackage[superscript,biblabel,nomove]{cite}
 \bibliographystyle{unsrt}
@@ -36,10 +36,16 @@
             linkcolor=black,
             citecolor=seccolor,
             urlcolor=black]{hyperref}
+
 \renewcommand{\figureautorefname}{Fig.}
 \renewcommand{\subsectionautorefname}{Section}
 \renewcommand{\sectionautorefname}{Section}
 \renewcommand{\chapterautorefname}{Chapter}
+
+
+% \let\oldautoref\autoref
+% \renewcommand{\autoref}[2]{\textbf{\oldautoref{#1}}{#2}}
+
 \urlstyle{same}
 
 \usepackage{titletoc}
@@ -114,8 +120,8 @@
 \usepackage{xurl}
 \usepackage{wrapfig}
 \usepackage[symbol]{footmisc}
-
-
+\usepackage{tcolorbox}
+\newtcolorbox[auto counter]{mybox}[2][]{float,title={Box~\thetcbcounter: #2},#1}
 
 % ------------------------------------------------- %
 % SOME COMMANDS
