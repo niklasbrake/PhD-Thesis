@@ -32,21 +32,9 @@
 \definecolor{seccolor}{HTML}{074bb6}
 \definecolor{lightseccolor}{HTML}{8d9db6}
 \definecolor{capcolor}{HTML}{cc3311}
-\usepackage[colorlinks=true,
-            linkcolor=black,
-            citecolor=seccolor,
-            urlcolor=black]{hyperref}
-
-\renewcommand{\figureautorefname}{Fig.}
-\renewcommand{\subsectionautorefname}{Section}
-\renewcommand{\sectionautorefname}{Section}
-\renewcommand{\chapterautorefname}{Chapter}
-
 
 % \let\oldautoref\autoref
 % \renewcommand{\autoref}[2]{\textbf{\oldautoref{#1}}{#2}}
-
-\urlstyle{same}
 
 \usepackage{titletoc}
 \usepackage{titlesec}
@@ -119,9 +107,21 @@
 \usepackage[toc,titletoc,title]{appendix}
 \usepackage{xurl}
 \usepackage{wrapfig}
-\usepackage[symbol]{footmisc}
 \usepackage{tcolorbox}
 \newtcolorbox[auto counter]{mybox}[2][]{float,title={Box~\thetcbcounter: #2},#1}
+
+
+\usepackage[symbol,hang, flushmargin]{footmisc}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            citecolor=seccolor,
+            urlcolor=black]{hyperref}
+\urlstyle{same}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+
 
 % ------------------------------------------------- %
 % SOME COMMANDS
