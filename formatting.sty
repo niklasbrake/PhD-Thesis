@@ -18,17 +18,17 @@
 \renewcommand{\theequation}{Eq. \thechapter.\arabic{equation}}
 
 \usepackage[superscript,biblabel,nomove]{cite}
-\bibliographystyle{unsrt}
+\bibliographystyle{unsrt2}
 
-\newcommand*{\citen}[1]{%
-  \begingroup
-    \romannumeral-`\x % remove space at the beginning of \setcitestyle
-    \setcitestyle{numbers}%
-    \cite{#1}%
-  \endgroup   
-}
+% \newcommand*{\citen}[1]{%
+%   \begingroup
+%     \romannumeral-`\x % remove space at the beginning of \setcitestyle
+%     \setcitestyle{numbers}%
+%     \cite{#1}%
+%   \endgroup   
+% }
 
-\usepackage{xcolor} % for colors
+\usepackage[table]{xcolor} % for colors
 \definecolor{seccolor}{HTML}{074bb6}
 \definecolor{lightseccolor}{HTML}{8d9db6}
 \definecolor{capcolor}{HTML}{cc3311}
@@ -109,7 +109,9 @@
 \usepackage{wrapfig}
 \usepackage{tcolorbox}
 \newtcolorbox[auto counter]{mybox}[2][]{float,title={Box~\thetcbcounter: #2},#1}
-
+\usepackage{longtable}
+\usepackage{colortbl}
+\definecolor{lightgray}{gray}{0.9}
 
 \usepackage[symbol,hang, flushmargin]{footmisc}
 \usepackage[colorlinks=true,
@@ -176,8 +178,8 @@
         {\large
             \begin{tabular}[t]{c}%
                 \textbf{\Large \color{seccolor}\@author} \\[1em]
-                Quantitative Life Sciences PhD Program, McGill University, Montreal \\[2em]
-                August 2024
+                Quantitative Life Sciences PhD Program, McGill University, Montréal \\[2em]
+                June 2024
             \end{tabular}\par}%
         \vskip 1in %
         A thesis submitted to McGill University in partial fulfillment of the requirements \par of the degree of Doctor of Philosophy

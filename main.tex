@@ -21,7 +21,7 @@
 \fancypagestyle{plain}{%redefining plain pagestyle
 \renewcommand{\headrulewidth}{0pt}
 \fancyhf{} %clear all headers and footers fields
-\fancyfoot[C]{\color{seccolor}\thepage} %prints the page number on the right side of the header
+\fancyfoot[R]{\color{seccolor}\thepage} %prints the page number on the right side of the header
 }
 
 \begin{document}
@@ -65,16 +65,26 @@ To be written...
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{contrib-knowledge}
+
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\hypersetup{linkcolor=seccolor}
+\renewcommand{\figurename}{Fig.}
+
+% \newpage
+% \include{contrib-knowledge}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{contrib-authors}
+% \newpage
+% \include{contrib-authors}
 
 
 \newpage
 
+\hypersetup{linkcolor=black}
 \renewcommand*\contentsname{\color{seccolor}Table of contents}
 \titlecontents{section}[18pt]{\addvspace{3pt}}{\thecontentslabel\enspace}{}{\titlerule*[0.7064pc]{.}\contentspage}
 \tableofcontents
@@ -82,47 +92,40 @@ To be written...
 \newpage
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\fancyfoot[R]{\color{seccolor}\thepage}
 \fancyhead[R]{}
 \fancyhead[L]{{\color{gray}\textit{\chaptername\ \thechapter}\ --\ \leftmark}}
-
-\renewcommand{\figureautorefname}{Fig.}
-\renewcommand{\subsectionautorefname}{Section}
-\renewcommand{\sectionautorefname}{Section}
-\renewcommand{\chapterautorefname}{Chapter}
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \hypersetup{linkcolor=seccolor}
-\renewcommand{\figurename}{Fig.}
 
 \include{chapter1-intro}
 
 \include{chapter2-natcom}
 
-% \include{chapter3-apEEG}
+\include{chapter3-apEEG}
 
-% \include{lorem_ipsum}
+\include{chapter4-concl}
 
-\newpage
+\newpage 
 \chapter*{References}
-\fancyhead[L]{{\color{gray}\nouppercase{References}}}
+\fancyhead[L]{{\color{gray}\textit{References}}}
 \setlength{\baselineskip}{12pt}
-\bibliographystyle{unsrt}
 \footnotesize
 
 % Suppress the chapter title "Bibliography"
 \begingroup
 \renewcommand\bibname{References}
 \renewcommand{\chapter}[2]{}% for other classes
-\bibliography{Bibliography/library_natcom,Bibliography/library_lit_review,Bibliography/library_apEEG}
+\bibliography{Bibliography/library_natcom,Bibliography/library_lit_review,Bibliography/library_apEEG,Bibliography/library_discussion}
 \endgroup
 
 % \begin{appendices}
 \addappheadtotoc
 \appendix
-% \include{appendixA}
+\include{appendixA}
 % \end{appendices}
 
 \end{document}
