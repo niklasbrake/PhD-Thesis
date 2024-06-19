@@ -46,7 +46,7 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 \fancyhead[L]{{\color{gray}\nouppercase{Abstract}}}
-Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be made entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid type A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately \qty{60}{\hertz} that is independent of neural dynamics. Consequently, systemic changes in synaptic currents, e.g. by drug administration, perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above \qty{60}{\hertz} is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and \qty{600}{\hertz}, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In sum, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
+Electrophysiological measurements of neural tissue allow us to observe millisecond changes in neural activity, across a broad range of spatial scales from micrometers to centimeters. At these larger spatial scales, electrophysiological measurements can be taken entirely noninvasively through the recording of electrical potentials at the scalp, known as electroencephalography (EEG). Periodic oscillations in these signals are known to reflect rhythmic brain activity, whereas broadband fluctuations remain poorly understood in comparison. Broadband fluctuations are evident from the continuous background trend in EEG spectra on top of which the peaks corresponding to brain rhythms are superimposed. Interpretations of this spectral trend range from irrelevant noise, to an epiphenomenon of brain rhythms, to a reflection of aperiodic brain activity. This lack of consensus sustains several open questions in the field. How should differences in the spectral trend be interpreted? Does this trend contaminate brain rhythm measurements? If so, how should spectra be rectified? In this thesis, I address these questions through the development of biophysical and statistical models of EEG generation that integrate both emerging physiological details as well as new experimental observations. The thesis comprises two manuscripts. The first manuscript concludes that spectra are predominantly shaped by the gating kinetics of γ-aminobutyric acid type A receptors. These kinetics produce a prominent Lorentzian shape in EEG spectra below approximately \qty{60}{\hertz} that is independent of neural dynamics. Consequently, systemic changes in synaptic currents, e.g. by drug administration, perturb brain rhythm estimates unless spectra are rectified by fitting and correcting this Lorentzian trend. Furthermore, EEG can reflect aperiodic synaptic activity and therefore identifying spectral peaks is a critical precondition for measuring differences in brain rhythms. The second manuscript concludes that the spectral trend above \qty{60}{\hertz} is partially due to the gating kinetics of fast glutamate receptors and mostly due to noise. Oscillatory spiking activity can produce EEG signals between approximately 60 and \qty{600}{\hertz}, but unlike at lower frequencies defining the power of these high frequency oscillations relative to the spectral trend is unjustified. In summary, this thesis presents a theory of the physiological mechanisms underlying broadband EEG signals and outlines practical implications for the analysis and interpretation of EEG data.
 
 \newpage
 
@@ -61,7 +61,21 @@ Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observ
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \fancyhead[L]{{\color{gray}\nouppercase{Acknowledgements}}}
 
-To be written...
+First and foremost, I extend my sincere thanks to my advisor, Dr. Anmar Khadra. He has guided me since my second year of undergrad in my quest to pursue studies in mathematical neuroscience --- a field I was not even certain existed when I began this long journey. His genuine desire for my success, constant encouragement of my research activities, and unwavering support through setbacks and failures have made my PhD environment one of passion, positivity, and fun. He has given me guidance when I most needed it, while also giving me room to grow and discover myself as a scientist. 
+
+I am also profoundly grateful to Dr. Derek Bowie. He mentored me in the writing of my first journal article and taught me many lessons in science communication. He remains a steadfast supporter of my development as a scientist and academic.
+
+Special thanks to the members of my dissertation committee, Drs. Ellis Cooper and Paul François, for their thoughtful suggestions, constructive criticism, and support throughout this process. Every year, I appreciated your friendly critiques and thought-provoking questions that improved and inspired my research.
+
+I am privileged to have been helped by far too many good and caring colleagues to name them all and I lament the omission of any of them. However, it would be a greater disservice to relegate to anonymity my peers who supported me the most and so I must single out a few. Jonas Lehnert, Sam Jamaleddine, and I started our degrees at the same time and their constant friendship throughout these six years has given me a caring and stable community that has been the bedrock of my studies. Laurent Mackay was the senior PhD student in the lab when I joined. He taught me a lot in those early years and of all my peers was always ready to go through the math together with pen and paper. Finally, I thank Nils Koch who is always willing to think through a problem together and is happy to spend our walks home together discussing our ongoing research.
+
+I would also like to thank my parents for their support and for the scientific values they instilled in me from a young age. Mama, you taught me to observe the world as I move through it. From collecting leaves as we walked through the woods, to peering out at every river and lake we drove by, you fostered my connection with the natural world. Papa, when I was a child, your heavenly knowledge of the workings of the world revealed to me that there is a depth and logic to its beauty. As I grew older, you taught me to be questioning and precise, and that disagreement and criticism are not insults when the goal is to arrive at the truth.
+
+To my wife, Preethi, you are my oneness, my other, my home. It is said that a scientist should be passionate about their work and yet detached from their findings. Next to the sublimity of \textit{kaaviya kaathal}, how could the ups and downs of my research affect me deeply? I could annotate each and every page in this thesis with references to your love and support. Thankfully, we have the rest of our lives together for me to sing your praise and that leaves room in this thesis to fulfill my degree requirements. 
+
+Finally, I dedicate this thesis to my newborn son, Kailai, whose pure, unbounded curiosity and playfulness in the face of staggering naivete and ignorance is a profound testament to the nature of learning. I know there are vast expanses of mathematics, neuroscience, and scientific investigation that remain unknown to me. Yet here I am boldly setting forth a thesis and claiming that I have advanced human knowledge. Perhaps if I had not seen my son smacking his head unabashedly into the same chair over and over again, I would not have the courage to make these claims. But he reminds me that the alternative is to spend forever lying on my back, waiting for others to carry me. So here it goes...
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,12 +88,12 @@ To be written...
 \hypersetup{linkcolor=seccolor}
 \renewcommand{\figurename}{Fig.}
 
-% \newpage
-% \include{contrib-knowledge}
+\newpage
+\include{contrib-knowledge}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newpage
-% \include{contrib-authors}
+\newpage
+\include{contrib-authors}
 
 
 \newpage
@@ -101,13 +115,13 @@ To be written...
 
 \hypersetup{linkcolor=seccolor}
 
-\include{chapter1-intro}
+% \include{chapter1-intro}
 
-\include{chapter2-natcom}
+% \include{chapter2-natcom}
 
-\include{chapter3-apEEG}
+% \include{chapter3-apEEG}
 
-\include{chapter4-concl}
+% \include{chapter4-concl}
 
 \newpage 
 \chapter*{References}
@@ -125,7 +139,7 @@ To be written...
 % \begin{appendices}
 \addappheadtotoc
 \appendix
-\include{appendixA}
+% \include{appendixA}
 % \end{appendices}
 
 \end{document}
