@@ -51,12 +51,12 @@ and divided our spectra by the fitted trend. However, if the parameter $\lambda$
 \subsection{Frequency resolution limitations and delta rhythms}
 One drawback to all broadband spectral analysis is how to deal with low frequencies \cite{Demanuele2007,Gerster2022}. Is this power part of the background trend or is it a low frequency rhythmic peak that is only half visible? One conclusion from \autoref{sec:natcomms} is that low frequency power is supported by aperiodic neural activity. When analyzing the EEG data following propofol administration, our conclusion was that low frequency power changes were a result of both aperiodic activity and delta rhythms. However, we could not delineate the two because no delta peak was clearly obvious. It was suggested by a reviewer to analyze our EEG spectra with a higher frequency resolution than \qty{0.5}{\hertz}. Unfortunately, the EEG signals were amplified with a high-pass filter above 0.1 Hz by a first-order filter and there had a relatively wide transition band, making power less than \qty{0.5}{\hertz} unreliable. Adding to this issue was that our analysis was concerned with changes within tens of seconds around loss of consciousness. Aside from the constraints of the amplifier, the relevant temporal resolution of the analysis placed constraints on our frequency resolution. For example, we could not improve the signal-to-noise ratio by averaging multiple spectra calculated across time (i.e., a periodogram) because the required time window for calculating each of these spectra was already large compared to the timescale of the experiment.
 
-\begin{wrapfigure}[12]{r}{54mm}
+\begin{wrapfigure}[11]{r}{54mm}
 \vspace{-19pt}
 \centering
 \includegraphics[width=48mm]{Figures/Discussion/delta_rhythms.png}
 \vspace{-9pt}
-\caption{\captiontitle{High resolution spectra.} n=14. Shading: 95\% confidence interval. LOC: loss of consciousness.} \label{fig:delta_resolution}
+\caption[High resolution spectra]{\captiontitle{High resolution spectra.} $n=14$. Shading: 95\% confidence interval. LOC: loss of consciousness.} \label{fig:delta_resolution}
 \end{wrapfigure}
 
 An analysis that was not included in the paper looked at the group-averaged spectra before and after loss of consciousness at a frequency resolution of \qty{0.1}{\hertz}. With the above caveats to this analysis in mind, these plots did seem to suggest a narrowband increase in the delta range (\autoref{fig:delta_resolution}). However, this observation was not reflected in the individual spectra for each patient --- likely due to poor signal-to-noise ratio for the reasons mentioned above –-- making parameterization impossible. We therefore did not attempt to quantitatively separate the relative contributions of aperiodic and periodic neural activity at low frequencies.
@@ -72,7 +72,7 @@ Secondly, it was important for our purposes that the firing rates and E:I ratio 
 \centering
 \includegraphics[width=14cm]{Figures/Discussion/subcritical_network.png}
 \vspace{-1em}
-\caption{\captiontitle{E-I network near criticality generates dipole synchrony.}
+\caption[E-I network near criticality generates dipole synchrony]{\captiontitle{E-I network near criticality generates dipole synchrony.}
 \textbf{a} Raster plot of E-I network with 30,000 neurons, with each neuron connected to 2\% of its neighbours. Neurons were embedded in plane with periodic boundary conditions and the probability of connection was proportional to $e^{-d_{ij}}$, where $d_{ij}$ is the pairwise distance. The effective branching number was calculated at each time point as the number of spikes that were transferred from the previous time point. Connections weights were tuned to roughly elicit activity with subcritical dynamics ($\hat{m}\approx0.83$).
 \textbf{b} The presynaptic network was projected onto two postsynaptic neurons. Simulated single-neuron EEG signals exhibited correlation of 0.61. 
 \textbf{c} Power spectrum of single-neuron EEG elicited by the E-I network (dark brown) compared to the same network with all internal connections severed, i.e., a branching number of zero (light brown).

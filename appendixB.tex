@@ -1,8 +1,11 @@
-\chapter*{List of figures}
-\addcontentsline{toc}{chapter}{List of figures}
-\fancyhead[L]{{\color{gray}\nouppercase{List of figures}}}
+\chapter{List of figures and tables}
+\label{sec:list_figs}
+
+\fancyhead[L]{{\color{gray}\textit{List of figures and tables}}}
+
+\hypersetup{citecolor=black,linkcolor=black}
  
-\renewcommand{\cftfigpresnum}{\bfseries \color{seccolor}\figurename\ }
+\renewcommand{\cftfigpresnum}{\bfseries \color{black}\figurename\ }
 \settowidth{\cftfignumwidth}{Figure 00.0000}
 \renewcommand\cftfigindent{0pt}  % no indentation
 
@@ -22,14 +25,12 @@
 
 \setlength{\parskip}{0pt}
 
+\section*{Figures}
 \listoffigures
 
-\newpage
-\chapter*{List of tables}
-\addcontentsline{toc}{chapter}{List of tables}
-\fancyhead[L]{{\color{gray}\nouppercase{List of tables}}}
-
-\renewcommand{\cfttabpresnum}{\bfseries \color{seccolor}\tablename\ }
+\vspace{1em}
+\section*{Tables}
+\renewcommand{\cfttabpresnum}{\bfseries \color{black}\tablename\ }
 \settowidth{\cfttabnumwidth}{Table 00.0000}
 \renewcommand\cfttabindent{0pt}  % no indentation
 \listoftables

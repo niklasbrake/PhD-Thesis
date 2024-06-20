@@ -53,7 +53,7 @@ Electrophysiological measurements of neural tissue allow us to observe milliseco
 \chapter*{Résumé}
 \addcontentsline{toc}{chapter}{Résumé}
 \fancyhead[L]{{\color{gray}\nouppercase{Résumé}}}
-Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observer les changements de l'activité neuronale à la milliseconde, sur une large gamme d'échelles spatiales allant du micromètre au centimètre. À ces échelles spatiales plus grandes, les mesures électrophysiologiques peuvent être effectuées de manière entièrement non invasive grâce à l'enregistrement de potentiels électriques au niveau du cuir chevelu, connu sous le nom d'électroencéphalographie (EEG). Les oscillations périodiques de l'EEG sont observées et caractérisées depuis longtemps, alors que la nature des fluctuations à large bande de ces signaux reste mal comprise en comparaison. Les fluctuations à large bande sont évidentes en raison de la tendance de fond continue des spectres EEG, sur laquelle se superposent les pics correspondant aux rythmes cérébraux. Les interprétations de cette tendance spectrale vont d'un bruit non pertinent à un épiphénomène des rythmes cérébraux, en passant par le reflet d'un régime apériodique de l'activité neuronale. Cette absence de consensus entretient plusieurs questions ouvertes dans ce domaine. Comment interpréter les différences de tendance spectrale? Cette tendance contamine-t-elle les mesures du rythme cérébral? Dans cette thèse, j'aborde ces questions en développant des modèles biophysiques et statistiques de la génération d'EEG qui intègrent à la fois des détails physiologiques émergents et de nouvelles observations expérimentales. La thèse comprend deux manuscrits. Le premier manuscrit conclut que l'EEG n'est pas seulement une mesure des rythmes cérébraux, mais qu'il peut aussi refléter l'activité synaptique apériodique. De plus, à des fréquences inférieures à environ 60 Hz, les spectres sont fortement modelés par la cinétique de gating des récepteurs de classe A de l'acide γ-aminobutyrique. Cette cinétique produit une forme lorentzienne proéminente dans les spectres EEG, qui est indépendante de la dynamique neuronale. Par conséquent, les changements systémiques dans les courants synaptiques perturbent les estimations du rythme cérébral, à moins que les spectres ne soient rectifiés en ajustant et en corrigeant la tendance lorentzienne. Le second manuscrit conclut que l'activité dopante ne peut pas générer de signaux EEG à large bande, mais qu'elle peut générer des oscillations à haute fréquence entre 60 et 600 Hz environ. Ces conclusions suggèrent qu'il est inutile de mesurer les oscillations à haute fréquence par rapport à la tendance spectrale, contrairement à ce qui se passe pour les rythmes cérébraux à basse fréquence. En résumé, cette thèse présente une théorie des mécanismes physiologiques sous-jacents aux signaux EEG à large bande et souligne les implications pratiques pour l'analyse et l'interprétation des données EEG.
+Les mesures électrophysiologiques des tissus neuronaux nous permettent d'observer les changements de l'activité neuronale à la milliseconde, sur une large gamme d'échelles spatiales allant du micromètre au centimètre. À ces échelles spatiales plus grandes, les mesures électrophysiologiques peuvent être effectuées de manière entièrement non invasive grâce à l'enregistrement de potentiels électriques au niveau du cuir chevelu, connu sous le nom d'électroencéphalographie (EEG). Les oscillations périodiques de l'EEG sont observées et caractérisées depuis longtemps, tandis que la nature des fluctuations à large bande de ces signaux reste relativement mal comprise. Les fluctuations à large bande sont évidentes en raison de la tendance de fond continue des spectres EEG, sur laquelle se superposent les pics correspondant aux rythmes cérébraux. Les interprétations de cette tendance spectrale varient d'un bruit non pertinent à un épiphénomène des rythmes cérébraux, jusqu'à un reflet d'un régime apériodique de l'activité neuronale. Cette absence de consensus entretient plusieurs questions ouvertes dans ce domaine. Comment interpréter les différences de tendance spectrale? Cette tendance contamine-t-elle les mesures des rythmes cérébraux? Dans cette thèse, j'aborde ces questions en développant des modèles biophysiques et statistiques de la génération d'EEG qui intègrent à la fois des détails physiologiques émergents et de nouvelles observations expérimentales. La thèse comprend deux manuscrits. Le premier manuscrit conclut que l'EEG n'est pas seulement une mesure des rythmes cérébraux, mais qu'il peut aussi refléter l'activité synaptique apériodique. De plus, à des fréquences inférieures à environ \qty{60}{\hertz}, les spectres sont fortement modelés par la cinétique de gating des récepteurs de classe A de l'acide γ-aminobutyrique. Cette cinétique produit une forme lorentzienne proéminente dans les spectres EEG, qui est indépendante de la dynamique neuronale. Par conséquent, les changements systémiques dans les courants synaptiques perturbent les estimations des rythmes cérébraux, à moins que les spectres ne soient rectifiés en corrigeant la tendance lorentzienne. Le second manuscrit conclut que la tendance spectrale au-dessus de \qty{60}{\hertz} est partiellement due à la cinétique de gating des récepteurs rapides du glutamate et principalement due au bruit. L'activité oscillatoire des spikes peut produire des signaux EEG entre environ 60 et \qty{600}{\hertz}, mais contrairement aux fréquences plus basses, définir la puissance de ces oscillations haute fréquence par rapport à la tendance spectrale n'est pas justifié. En résumé, cette thèse présente une théorie des mécanismes physiologiques sous-jacents aux signaux EEG à large bande et souligne les implications pratiques pour l'analyse et l'interprétation des données EEG.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -67,7 +67,7 @@ I am also profoundly grateful to Dr. Derek Bowie. He mentored me in the writing 
 
 Special thanks to the members of my dissertation committee, Drs. Ellis Cooper and Paul François, for their thoughtful suggestions, constructive criticism, and support throughout this process. Every year, I appreciated your friendly critiques and thought-provoking questions that improved and inspired my research.
 
-I am privileged to have been helped by far too many good and caring colleagues to name them all and I lament the omission of any of them. However, it would be a greater disservice to relegate to anonymity my peers who supported me the most and so I must single out a few. Jonas Lehnert, Sam Jamaleddine, and I started our degrees at the same time and their constant friendship throughout these six years has given me a caring and stable community that has been the bedrock of my studies. Laurent Mackay was the senior PhD student in the lab when I joined. He taught me a lot in those early years and of all my peers was always ready to go through the math together with pen and paper. Finally, I thank Nils Koch who is always willing to think through a problem together and is happy to spend our walks home together discussing our ongoing research.
+I am privileged to have been helped by far too many good and caring colleagues to name them all and I lament the omission of any of them. However, it would be a greater disservice to relegate to anonymity my peers who supported me the most and so I must single out a few. Jonas Lehnert, Sam Jamaleddine, and I started our degrees at the same time and their constant friendship throughout these six years has given me a caring and stable community that has been the bedrock of my studies. Laurent Mackay was the senior PhD student in the lab when I joined. He taught me a lot in those early years and of all my peers was always ready to go through the math together with pen and paper. Finally, I thank Nils Koch who is always willing to talk over a problem with me and is happy to spend our walks home together discussing our ongoing research.
 
 I would also like to thank my parents for their support and for the scientific values they instilled in me from a young age. Mama, you taught me to observe the world as I move through it. From collecting leaves as we walked through the woods, to peering out at every river and lake we drove by, you fostered my connection with the natural world. Papa, when I was a child, your heavenly knowledge of the workings of the world revealed to me that there is a depth and logic to its beauty. As I grew older, you taught me to be questioning and precise, and that disagreement and criticism are not insults when the goal is to arrive at the truth.
 
@@ -115,13 +115,13 @@ Finally, I dedicate this thesis to my newborn son, Kailai, whose pure, unbounded
 
 \hypersetup{linkcolor=seccolor}
 
-% \include{chapter1-intro}
+\include{chapter1-intro}
 
-% \include{chapter2-natcom}
+\include{chapter2-natcom}
 
-% \include{chapter3-apEEG}
+\include{chapter3-apEEG}
 
-% \include{chapter4-concl}
+\include{chapter4-concl}
 
 \newpage 
 \chapter*{References}
@@ -139,7 +139,9 @@ Finally, I dedicate this thesis to my newborn son, Kailai, whose pure, unbounded
 % \begin{appendices}
 \addappheadtotoc
 \appendix
-% \include{appendixA}
+\include{appendixA}
+\include{appendixB}
+\include{appendixC}
 % \end{appendices}
 
 \end{document}

@@ -30,6 +30,7 @@ ENTRY
     series
     title
     type
+    url
     volume
     year
   }
@@ -261,6 +262,18 @@ FUNCTION {n.dashify}
       if$
     }
   while$
+}
+
+FUNCTION {format.url}
+{ url duplicate$ empty$
+    { pop$ "" }
+    { "\url{" swap$ * "}" * 
+      urldate duplicate$ empty$
+        { pop$ }
+        { ". "  swap$ * "" * * }
+      if$
+    }
+  if$
 }
 
 FUNCTION {format.date}
@@ -544,6 +557,25 @@ FUNCTION {article}
   if$
   new.block
   note output
+  fin.entry
+}
+
+FUNCTION {software}
+{ output.bibitem
+  format.authors "author" output.check
+  new.block
+  format.title "title" output.check
+  new.block
+  crossref missing$
+    { publisher "publisher" output.check
+    }
+    { format.article.crossref output.nonnull
+      format.pages output
+    }
+  if$
+  new.block
+  format.url output
+  format.date "year" output.check
   fin.entry
 }
 
